@@ -14,10 +14,14 @@ public class SimpleUI {
         panel.add(button);
         panel.add(checkBox);
 
+
         frame.add(panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
+        JOptionPane.showMessageDialog(frame, "Welcome to Simple UI");
 
         button.addActionListener(e -> {
 
