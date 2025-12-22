@@ -25,23 +25,27 @@ public class SimpleUI {
 
         button.addActionListener(e -> {
 
-            if (!checkBox.isSelected()) {
-                JOptionPane.showMessageDialog(
-                        frame,
-                        "Please tick the checkbox first!",
-                        "Error",
-                        JOptionPane.ERROR_MESSAGE
-                );
-                return;
-            }
+                    if (checkBox.isSelected() && !textField.getText().equals("")) {
+                        String text = textField.getText();
+                        JOptionPane.showMessageDialog(
+                                frame,
+                                text,
+                                "Text",
+                                JOptionPane.INFORMATION_MESSAGE
+                        );
 
-            String text = textField.getText();
-            JOptionPane.showMessageDialog(
-                    frame,
-                    text,
-                    "Text",
-                    JOptionPane.INFORMATION_MESSAGE
-            );
+
+                    }
+                        else {
+                        JOptionPane.showMessageDialog(
+                                frame,
+                                "Please meet the requirements!",
+                                "Error",
+                                JOptionPane.ERROR_MESSAGE
+                        );
+                    }
+
+
         });
     }
 }
